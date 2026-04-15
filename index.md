@@ -6,17 +6,17 @@
 ## Summaries
 <!-- 소스별 요약 페이지 -->
 
-_아직 페이지가 없습니다._
+- [LLM Wiki by Andrej Karpathy](pages/summaries/karpathy-2026-llm-wiki.md) - LLM 기반 위키 패턴 원본 제안서 요약
 
 ## Concepts
 <!-- 개념 정리 페이지 -->
 
-_아직 페이지가 없습니다._
+- [LLM Wiki](pages/concepts/llm-wiki.md) - LLM 기반 개인 지식 관리 패턴 (compounding artifact)
 
 ## Entities
 <!-- 인물, 조직, 도구 등 -->
 
-_아직 페이지가 없습니다._
+- [Andrej Karpathy](pages/entities/andrej-karpathy.md) - AI 연구자, LLM Wiki 패턴 제안자
 
 ## Syntheses
 <!-- 종합 분석 페이지 -->
