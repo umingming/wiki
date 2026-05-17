@@ -25,8 +25,12 @@
 <!-- 인물, 조직, 도구 등 -->
 
 - [Andrej Karpathy](pages/entities/andrej-karpathy.md) - AI 연구자, LLM Wiki 패턴 제안자 | updated: 2026-04-15 | sources: 1 | tags: person, ai, deep-learning
+- [Phaser](pages/entities/phaser.md) - 웹 브라우저용 2D 게임 프레임워크 (JavaScript/TypeScript) | updated: 2026-05-17 | sources: 0 | tags: tool, game-engine, javascript, web
+- [Capacitor](pages/entities/capacitor.md) - 웹앱을 네이티브 앱으로 래핑하여 앱스토어 배포하는 도구 | updated: 2026-05-17 | sources: 0 | tags: tool, mobile, web, cross-platform
+- [Aseprite](pages/entities/aseprite.md) - 픽셀 아트 및 도트 애니메이션 전문 에디터 | updated: 2026-05-17 | sources: 0 | tags: tool, pixel-art, game-dev, graphics
 
 ## Syntheses
 <!-- 종합 분석 페이지 -->
 
 - [_Synthesis Template_](pages/syntheses/_template.md) - 재사용 가능한 질의 결과, 비교, 통찰을 기록하기 위한 기본 템플릿 | updated: 2026-04-15 | sources: 0 | tags: template, synthesis
+- [픽셀 경영시뮬 웹 기술 스택 선정](pages/syntheses/pixel-game-web-stack.md) - 카이로소프트 스타일 도트 게임을 웹 기술로 개발·배포하기 위한 기술 스택 비교 및 선정 | updated: 2026-05-17 | sources: 0 | tags: game-dev, pixel-art, mobile, web, synthesis
