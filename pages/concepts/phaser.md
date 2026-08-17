@@ -1,13 +1,13 @@
 ---
+type: concept
 title: "Phaser"
+status: active
 created: 2026-05-17
-updated: 2026-05-17
-sources: []
-tags:
-  - tool
-  - game-engine
-  - javascript
-  - web
+updated: 2026-08-17
+related:
+  - "[[pages/notes/2026-05-17-pixel-game-web-stack]]"
+  - "[[pages/concepts/capacitor]]"
+  - "[[pages/concepts/aseprite]]"
 ---
 
 # Phaser
@@ -33,12 +33,12 @@ tags:
 - Tiled 맵 에디터 연동 플러그인
 - 입력 처리 (키보드, 마우스, 터치)
 
-## 위키에서의 중요성
+## 위키에서의 쓰임
 
-[픽셀 경영시뮬 웹 기술 스택 선정](../syntheses/pixel-game-web-stack.md)에서 카이로소프트 스타일 도트 게임의 메인 엔진으로 선정됨. 웹 개발 경험을 그대로 활용할 수 있고, [Capacitor](capacitor.md)와 조합하여 모바일 앱스토어 배포가 가능하다.
+[[pages/notes/2026-05-17-pixel-game-web-stack]]에서 카이로소프트 스타일 도트 게임의 메인 엔진으로 선정됨. 웹 개발 경험을 그대로 활용할 수 있고, [[pages/concepts/capacitor]]와 조합하여 모바일 앱스토어 배포가 가능하다.
 
 ## 관련 페이지
 
-- [픽셀 경영시뮬 웹 기술 스택 선정](../syntheses/pixel-game-web-stack.md)
-- [Capacitor](capacitor.md)
-- [Aseprite](aseprite.md)
+- [[pages/notes/2026-05-17-pixel-game-web-stack]] — 웹 기술 스택 정리
+- [[pages/concepts/capacitor]]
+- [[pages/concepts/aseprite]]

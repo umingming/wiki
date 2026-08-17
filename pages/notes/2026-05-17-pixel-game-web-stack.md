@@ -1,17 +1,17 @@
 ---
-title: "픽셀 경영시뮬 모바일 게임 — 웹 기술 스택 선정"
+type: note
+title: "픽셀 경영시뮬 모바일 게임 — 웹 기술 스택 정리"
+description: "카이로소프트 스타일 도트 경영시뮬을 웹 기술(Phaser 3 + Capacitor)로 개발·배포하기 위한 스택 비교와 결론"
+domain: game-dev
 created: 2026-05-17
-updated: 2026-05-17
-sources: []
-tags:
-  - game-dev
-  - pixel-art
-  - mobile
-  - web
-  - synthesis
+tags: [game-dev, pixel-art, mobile, web]
+related:
+  - "[[pages/concepts/phaser]]"
+  - "[[pages/concepts/capacitor]]"
+  - "[[pages/concepts/aseprite]]"
 ---
 
-# 픽셀 경영시뮬 모바일 게임 — 웹 기술 스택 선정
+# 픽셀 경영시뮬 모바일 게임 — 웹 기술 스택 정리
 
 ## 질문
 
@@ -19,23 +19,15 @@ tags:
 - 웹 기술로 만들어도 되는가, 네이티브가 필요한가?
 - 앱스토어 배포는 어떻게 하는가?
 
-## 짧은 결론
+## 결론
 
 - 이 장르는 고성능 렌더링이 불필요하므로 **웹 기술로 충분**하다.
-- 추천 조합: **[Phaser](../entities/phaser.md) 3 + TypeScript + Vite + [Capacitor](../entities/capacitor.md)**.
-- 도트 에셋 제작에는 **[Aseprite](../entities/aseprite.md)** + **Tiled**(타일맵 에디터)가 적합하다.
+- 채택 조합: **[[pages/concepts/phaser]] 3 + TypeScript + Vite + [[pages/concepts/capacitor]]**.
+- 도트 에셋 제작에는 **[[pages/concepts/aseprite]]** + **Tiled**(타일맵 에디터)가 적합하다.
 - 평소 개발은 브라우저에서 하고, 스토어 배포 시 Capacitor로 네이티브 래핑한다.
 - 네이티브 전환은 3D, 실시간 PvP, AR 등 고성능 요구가 있을 때만 필요하다.
 
-## 핵심 근거
-
-- 카이로소프트/월간아이돌 장르 분석 (UI + 데이터 로직 중심, 터치 입력 단순)
-- 웹 기반 게임 성공 사례 (CrossCode — Phaser 기반, Vampire Survivors — 초기 웹 기반)
-- 기존 웹 개발 경험 활용 가능성
-
-## 분석
-
-### 게임 엔진/프레임워크 비교
+## 게임 엔진/프레임워크 비교
 
 | 엔진 | 언어 | 웹 배포 | 모바일 배포 | 특징 |
 |------|------|---------|------------|------|
@@ -46,7 +38,7 @@ tags:
 | PICO-8 | Lua | 가능 | 제한적 | 128x128 판타지 콘솔, 레트로 극대화, 상용 배포 어려움 |
 | Flutter + Flame | Dart | 가능 | 네이티브 빌드 | UI 비중 큰 게임에 적합, 게임 생태계 작음 |
 
-### 웹앱 vs 네이티브 판단 기준
+## 웹앱 vs 네이티브 판단 기준
 
 **웹으로 충분한 이유:**
 
@@ -62,7 +54,7 @@ tags:
 - 네이티브 하드웨어 깊은 접근 (AR, 블루투스)
 - 고사양 파티클/셰이더 효과
 
-### 모바일 스토어 배포 방식
+## 모바일 스토어 배포 방식
 
 | 방식 | 설명 |
 |------|------|
@@ -87,7 +79,7 @@ Capacitor 플러그인으로 네이티브 기능도 사용 가능:
 - 인앱 결제: `@capacitor-community/in-app-purchases`
 - 진동/햅틱: `@capacitor/haptics`
 
-### 도트 에셋 제작 도구
+## 도트 에셋 제작 도구
 
 | 도구 | 용도 |
 |------|------|
@@ -103,7 +95,7 @@ Capacitor 플러그인으로 네이티브 기능도 사용 가능:
 - **OpenGameArt.org** — 오픈 라이선스 게임 아트
 - **Kenney.nl** — 고품질 무료 에셋 팩
 
-### 카이로소프트 스타일 핵심 구현 요소
+## 카이로소프트 스타일 핵심 구현 요소
 
 ```
 ├── 타일맵 기반 월드 (건물, 시설 배치)
@@ -119,16 +111,6 @@ Capacitor 플러그인으로 네이티브 기능도 사용 가능:
 - Phaser 4가 개발 중이나 안정 릴리스 시점이 불확실. 현 시점에서는 Phaser 3이 안전한 선택.
 - Capacitor WebView 성능은 기기에 따라 차이가 있을 수 있으나, 이 장르에서는 문제 되지 않을 수준.
 - 인앱 결제/광고 SDK의 Capacitor 플러그인 유지보수 상태는 사용 전 확인 필요.
-
-## 위키에 반영할 변경
-
-- [x] Entity 페이지 생성: [Phaser](../entities/phaser.md), [Capacitor](../entities/capacitor.md), [Aseprite](../entities/aseprite.md)
-
-## 관련 페이지
-
-- [Phaser](../entities/phaser.md)
-- [Capacitor](../entities/capacitor.md)
-- [Aseprite](../entities/aseprite.md)
 
 ## 후속 질문
 

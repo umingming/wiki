@@ -1,74 +1,13 @@
-# LLM Wiki Agent Guide
+# Agent Guide
 
-This repository is an LLM-maintained wiki. Codex should treat it as a persistent knowledge base, not as a loose collection of notes.
+이 레포는 LLM이 관리하는 **개인 지식 위키**다 (결정·근거·분석의 WHY·HOW 레이어).
 
-## Mission
+**스키마는 [CLAUDE.md](CLAUDE.md) 가 단일 정본이다** — 여기 규칙을 중복 기술하지 않는다. 작업 전 반드시 읽고 따를 것. 에이전트 진입점(권위 순서·인용법·경계)은 [pages/guides/agents.md](pages/guides/agents.md), 결정 절차는 [pages/guides/how-we-decide.md](pages/guides/how-we-decide.md).
 
-- Read raw sources from `sources/`
-- Maintain structured markdown pages in `pages/`
-- Keep `index.md` and `log.md` current
-- Turn reusable answers into wiki assets instead of leaving them only in chat
+핵심만 요약하면:
 
-## Core Rules
-
-1. `sources/` is immutable raw input. Do not rewrite or summarize in place.
-2. Prefer updating existing pages over creating duplicate pages.
-3. Every important claim, comparison, or synthesis must be traceable to source files.
-4. When a query reveals reusable insight, create or update a page under `pages/syntheses/`.
-5. Maintain cross-links across summaries, concepts, entities, and syntheses.
-6. When new information conflicts with existing pages, preserve the conflict explicitly instead of silently overwriting it.
-
-## Operating Workflow
-
-### Ingest
-1. Confirm the raw source exists under `sources/`
-2. Create or update a summary in `pages/summaries/`
-3. Update relevant pages in `pages/concepts/`, `pages/entities/`, and `pages/syntheses/`
-4. Update `index.md`
-5. Append an `INGEST` entry to `log.md`
-
-### Query
-1. Read `index.md` first to find relevant pages
-2. Use the wiki pages as the main working set for answers
-3. If the answer produces reusable comparison, framing, insight, or decision support, save it into `pages/syntheses/` or expand an existing page
-4. If the answer changes the understanding of a concept or entity, update those pages too
-5. Append a `QUERY` entry to `log.md`
-
-### Lint
-1. Check frontmatter validity
-2. Check broken internal links
-3. Check `index.md` coverage
-4. Check orphan pages
-5. Check missing important concept/entity pages
-6. Check unsupported claims and weak cross-references
-7. Check whether important query outputs were failed to be reintegrated
-8. Append a `LINT` entry to `log.md`
-
-## Page Conventions
-
-- Required frontmatter on every page: `title`, `created`, `updated`, `sources`, `tags`
-- Use lowercase kebab-case filenames
-- Use relative markdown links
-- Keep pages compact, link-rich, and easy to extend
-- Start new synthesis pages from `pages/syntheses/_template.md`
-
-## Page Intent
-
-- `pages/summaries/`: one source, faithfully compressed
-- `pages/concepts/`: stable ideas synthesized across sources
-- `pages/entities/`: people, organizations, tools, projects
-- `pages/syntheses/`: reusable answers, comparisons, trends, decisions, cross-source insights
-
-## Logging Format
-
-Use:
-
-`[YYYY-MM-DD HH:MM] **INGEST** - ...`
-
-`[YYYY-MM-DD HH:MM] **QUERY** - ...`
-
-`[YYYY-MM-DD HH:MM] **LINT** - ...`
-
-## Priority
-
-When there is tension between chat convenience and wiki quality, prefer the action that makes the wiki more reusable later.
+1. `sources/` 는 불변 원본, `pages/` 는 LLM이 관리한다. 단 `decision` 은 accepted 후 본문 동결 — 내용이 바뀌면 대체(supersede)한다.
+2. `index.md` · `decisions-index.md` · `llms.txt` 는 자동 생성물이다. 직접 편집하지 말고 `node scripts/build-index.mjs` 로 재생성한다.
+3. 커밋 전 게이트: `node scripts/wiki-lint.mjs --report && node scripts/build-index.mjs --check` (에러 0).
+4. 새 페이지는 `node scripts/new.mjs <type> <slug> [title]` 로 만든다 (ID·날짜·owner 자동 stamp).
+5. 질의는 `llms.txt`/`index.md` 에서 시작하고, 재사용 가치 있는 답변은 위키로 재편입한 뒤 `log.md` 에 기록한다.

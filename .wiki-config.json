@@ -1,8 +1,0 @@
-{
-  "name": "LLM Wiki",
-  "version": "1.0.0",
-  "created": "2026-04-15",
-  "description": "LLM이 관리하는 개인 지식 위키",
-  "schema_version": "1",
-  "page_categories": ["summaries", "concepts", "entities", "syntheses"]
-}

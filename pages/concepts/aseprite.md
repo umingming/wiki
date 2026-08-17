@@ -1,13 +1,12 @@
 ---
+type: concept
 title: "Aseprite"
+status: active
 created: 2026-05-17
-updated: 2026-05-17
-sources: []
-tags:
-  - tool
-  - pixel-art
-  - game-dev
-  - graphics
+updated: 2026-08-17
+related:
+  - "[[pages/notes/2026-05-17-pixel-game-web-stack]]"
+  - "[[pages/concepts/phaser]]"
 ---
 
 # Aseprite
@@ -40,11 +39,11 @@ tags:
 | **TexturePacker** | 스프라이트 시트 패킹 |
 | **Lospec** | 팔레트, 튜토리얼 모음 사이트 |
 
-## 위키에서의 중요성
+## 위키에서의 쓰임
 
-[픽셀 경영시뮬 웹 기술 스택 선정](../syntheses/pixel-game-web-stack.md)에서 카이로소프트 스타일 도트 캐릭터 스프라이트 및 애니메이션 제작 도구로 선정됨.
+[[pages/notes/2026-05-17-pixel-game-web-stack]]에서 카이로소프트 스타일 도트 캐릭터 스프라이트 및 애니메이션 제작 도구로 선정됨.
 
 ## 관련 페이지
 
-- [픽셀 경영시뮬 웹 기술 스택 선정](../syntheses/pixel-game-web-stack.md)
-- [Phaser](phaser.md)
+- [[pages/notes/2026-05-17-pixel-game-web-stack]] — 웹 기술 스택 정리
+- [[pages/concepts/phaser]]

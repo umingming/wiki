@@ -1,13 +1,12 @@
 ---
+type: concept
 title: "Capacitor"
+status: active
 created: 2026-05-17
-updated: 2026-05-17
-sources: []
-tags:
-  - tool
-  - mobile
-  - web
-  - cross-platform
+updated: 2026-08-17
+related:
+  - "[[pages/notes/2026-05-17-pixel-game-web-stack]]"
+  - "[[pages/concepts/phaser]]"
 ---
 
 # Capacitor
@@ -68,11 +67,11 @@ Ionic에서 만든 오픈소스 도구로, 웹앱을 네이티브 앱 껍데기(
 | TWA | Android 전용, iOS 불가 |
 | Electron | 데스크톱 전용 |
 
-## 위키에서의 중요성
+## 위키에서의 쓰임
 
-[픽셀 경영시뮬 웹 기술 스택 선정](../syntheses/pixel-game-web-stack.md)에서 웹 기반 게임을 앱스토어에 배포하기 위한 래핑 도구로 선정됨. [Phaser](phaser.md)로 만든 게임을 수정 없이 네이티브 앱으로 변환할 수 있다.
+[[pages/notes/2026-05-17-pixel-game-web-stack]]에서 웹 기반 게임을 앱스토어에 배포하기 위한 래핑 도구로 선정됨. [[pages/concepts/phaser]]로 만든 게임을 수정 없이 네이티브 앱으로 변환할 수 있다.
 
 ## 관련 페이지
 
-- [픽셀 경영시뮬 웹 기술 스택 선정](../syntheses/pixel-game-web-stack.md)
-- [Phaser](phaser.md)
+- [[pages/notes/2026-05-17-pixel-game-web-stack]] — 웹 기술 스택 정리
+- [[pages/concepts/phaser]]

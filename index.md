@@ -1,36 +1,24 @@
-# Wiki Index
+# 개인 지식 위키 — 카탈로그
 
-> 이 파일은 위키의 모든 페이지를 카테고리별로 정리합니다.
-> Ingest 워크플로우 시 자동으로 업데이트됩니다.
-> 질의 시에는 이 파일을 먼저 읽고 관련 페이지를 찾습니다.
-
-## Index Conventions
-
-- 각 항목은 `링크 - 한 줄 요약 | updated: YYYY-MM-DD | sources: N | tags: ...` 형식을 권장합니다.
-- `sources: N`은 프론트매터의 `sources` 개수 기준입니다.
-- `updated`는 페이지 프론트매터의 최신 수정일입니다.
-- 중요한 synthesis는 재사용 가치가 드러나는 제목과 설명을 사용합니다.
-
-## Summaries
-<!-- 소스별 요약 페이지 -->
-
-- [LLM Wiki by Andrej Karpathy](pages/summaries/karpathy-2026-llm-wiki.md) - LLM 기반 위키 패턴 원본 제안서 요약 | updated: 2026-04-15 | sources: 1 | tags: summary, llm, knowledge-management
+<!-- 이 파일은 scripts/build-index.mjs 가 자동 생성합니다. 직접 편집하지 마세요. -->
 
 ## Concepts
-<!-- 개념 정리 페이지 -->
 
-- [LLM Wiki](pages/concepts/llm-wiki.md) - LLM 기반 개인 지식 관리 패턴 (compounding artifact) | updated: 2026-04-15 | sources: 1 | tags: llm, knowledge-management, workflow
+- [[pages/concepts/andrej-karpathy]] — AI 연구자 — LLM Wiki 패턴 제안자 (Tesla AI 디렉터, OpenAI 창립 멤버, Stanford 박사)
+- [[pages/concepts/aseprite]] — 픽셀 아트와 도트 애니메이션 제작에 특화된 그래픽 에디터. 인디 게임 개발자들 사이에서 도트 그래픽 제작 도구의 사실상 표준으로 사용된다.
+- [[pages/concepts/capacitor]] — Ionic에서 만든 오픈소스 도구로, 웹앱을 네이티브 앱 껍데기(WebView)에 넣어 Android/iOS 앱스토어에 배포할 수 있게 해준다…
+- [[pages/concepts/llm-wiki]] — LLM Wiki는 Andrej Karpathy가 제안한 개인 지식 관리 패턴이다. LLM이 원본 자료(논문, 기사, 영상 등)를 읽고, 구조화…
+- [[pages/concepts/phaser]] — 웹 브라우저용 2D 게임 프레임워크. HTML5 Canvas와 WebGL 기반으로 동작하며, JavaScript/TypeScript로 게임을…
+- [[pages/glossary]] — 동의어·비슷한 말을 **하나의 정답**으로 고정하는 페이지. 결정·분석 페이지는 용어 첫 등장 시 여기로 링크한다. 용어가 흔들리면 문서·코드…
 
-## Entities
-<!-- 인물, 조직, 도구 등 -->
+## Guides
 
-- [Andrej Karpathy](pages/entities/andrej-karpathy.md) - AI 연구자, LLM Wiki 패턴 제안자 | updated: 2026-04-15 | sources: 1 | tags: person, ai, deep-learning
-- [Phaser](pages/entities/phaser.md) - 웹 브라우저용 2D 게임 프레임워크 (JavaScript/TypeScript) | updated: 2026-05-17 | sources: 0 | tags: tool, game-engine, javascript, web
-- [Capacitor](pages/entities/capacitor.md) - 웹앱을 네이티브 앱으로 래핑하여 앱스토어 배포하는 도구 | updated: 2026-05-17 | sources: 0 | tags: tool, mobile, web, cross-platform
-- [Aseprite](pages/entities/aseprite.md) - 픽셀 아트 및 도트 애니메이션 전문 에디터 | updated: 2026-05-17 | sources: 0 | tags: tool, pixel-art, game-dev, graphics
+- [[pages/decisions/open-decisions]] — 아직 안 정한(또는 곧 정할) **결정** 목록. 정해지면 `templates/decision.md`로 `DEC-000X` 승격 후 이 표에서…
+- [[pages/guides/agents]] — 이 위키는 `개인 지식 베이스`의 **WHY·HOW 레이어**다 — 결정·근거·분석. 구현 코드(API·사용법)는 여기 없다 — **각 프로젝…
+- [[pages/guides/how-we-decide]] — **미래의 나(또는 에이전트)가 "왜 이렇게 했지?"를 물을 만한 갈림길**이면 남긴다. 갈림길이 아니었으면 결정이 아니다 — 결정까지는 아닌…
 
-## Syntheses
-<!-- 종합 분석 페이지 -->
+## Notes
 
-- [_Synthesis Template_](pages/syntheses/_template.md) - 재사용 가능한 질의 결과, 비교, 통찰을 기록하기 위한 기본 템플릿 | updated: 2026-04-15 | sources: 0 | tags: template, synthesis
-- [픽셀 경영시뮬 웹 기술 스택 선정](pages/syntheses/pixel-game-web-stack.md) - 카이로소프트 스타일 도트 게임을 웹 기술로 개발·배포하기 위한 기술 스택 비교 및 선정 | updated: 2026-05-17 | sources: 0 | tags: game-dev, pixel-art, mobile, web, synthesis
+- [[pages/notes/2026-05-17-pixel-game-web-stack]] — 카이로소프트 스타일 도트 경영시뮬을 웹 기술(Phaser 3 + Capacitor)로 개발·배포하기 위한 스택 비교와 결론
+
+> 마지막 갱신: 2026-08-17 | 총 페이지: 10

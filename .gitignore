@@ -1,2 +1,16 @@
+# OS
+.DS_Store
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Editor / IDE
 .obsidian/
+.vscode/
+.idea/
+
+# 세션 상태
 .omc/
